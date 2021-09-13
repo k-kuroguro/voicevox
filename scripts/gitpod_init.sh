@@ -1,5 +1,7 @@
 #!/bin/sh
 
+fctix-autostart
+
 cd /workspace/voicevox
 
 npm ci

@@ -13,7 +13,7 @@ RUN sudo apt-get update && \
   sudo apt-get install -y libsndfile1 && \
   expect -c "\
     set timeout 10\n\
-    spawn apt-get install -y language-pack-ja-base language-pack-ja fonts-takao fcitx-mozc emacs-mozc fonts-inconsolata\n\
+    spawn apt-get install -y language-pack-ja-base language-pack-ja fonts-takao fcitx fcitx-mozc emacs-mozc fonts-inconsolata\n\
     expect \"99:\"\n\
     send \"55\n\"\n\
     exit 0\n\
