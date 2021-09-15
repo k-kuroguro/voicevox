@@ -1,6 +1,6 @@
 #!/bin/sh
 
-fctix-autostart
+fcitx-autostart
 
 cd /workspace/voicevox
 
