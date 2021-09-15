@@ -12,3 +12,5 @@ git clone -b ${LATEST_TAG} --depth 1 https://github.com/Hiroshiba/voicevox_engin
 pyenv install 3.7.9
 pyenv global 3.7.9
 pip install -r ./voicevox_engine/requirements.txt
+
+exit 0
