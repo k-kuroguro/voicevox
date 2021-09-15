@@ -13,9 +13,11 @@ RUN sudo apt-get update && \
   sudo apt-get install -y libsndfile1 && \
   expect -c "\
     set timeout 10\n\
-    spawn apt-get install -y language-pack-ja-base language-pack-ja fonts-takao fcitx fcitx-mozc emacs-mozc fonts-inconsolata\n\
+    spawn sudo apt-get install -y language-pack-ja-base language-pack-ja fcitx fcitx-mozc fonts-inconsolata fonts-takao\n\
     expect \"99:\"\n\
     send \"55\n\"\n\
+    expect \"(OADG 109A)\"\n\
+    send \"1\n\"\n\
     exit 0\n\
   " && \
   sudo apt-get clean && \
@@ -27,6 +29,7 @@ ENV VUE_APP_ENGINE_URL http://127.0.0.1:50021
 ENV LANG ja_JP.UTF-8
 ENV GTK_IM_MODULE fcitx
 ENV QT_IM_MODULE fcitx
-ENV XMODIFIERS fcitx
+ENV XMODIFIERS @im=fcitx
+ENV DefaultIMModule fcitx
 RUN sudo locale-gen en_US.UTF-8
 RUN sudo locale-gen ja_JP.UTF-8
